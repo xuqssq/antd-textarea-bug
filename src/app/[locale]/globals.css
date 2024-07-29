@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+body,
+html {}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all 0.4s;
+}
+.rotate_default {
+  transition: all 0.4s;
+}
+
+.rotate_1 {
+  transform: rotate(90deg);
+  transition: all 0.4s;
+}
+.rotate_default_1 {
+  transition: all 0.4s;
+}
+
+.hidden-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hidden-bar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+.skeleton_ans_light {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.06) 25%,
+    rgba(0, 0, 0, 0.15) 37%,
+    rgba(0, 0, 0, 0.06) 63%
+  );
+  background-size: 400% 100%;
+  animation-name: skeleton-loading;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.skeleton_ans_dark {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.12) 25%,
+    rgba(255, 255, 255, 0.18) 37%,
+    rgba(255, 255, 255, 0.12) 63%
+  );
+  background-size: 400% 100%;
+  animation-name: skeleton-loading;
+  animation-duration: 1.4s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.faq_collapse .ant-collapse-item {
+  border: 1.5px solid #2a3240 !important;
+  margin: 8px 0 !important;
+  border-radius: 16px !important;
+}
+
+.faq_collapse .ant-collapse-item-active {
+  background: linear-gradient(
+    178.75deg,
+    #8e265e -71.43%,
+    #f0b1db 123.42%
+  ) !important;
+  border: none !important;
+}
+
+.faq_collapse .ant-collapse-content-box {
+  font-size: 14px !important;
+  border-top: 1px solid #ffffff80;
+  margin: 0 30px !important;
+  text-align: left !important;
+  font-family: var(--font-InterRegular);
+  padding: 20px 0px !important;
+}
+.faq_collapse .ant-collapse-header {
+  padding: 20px 30px !important;
+}
+.faq_collapse .ant-collapse-header-text {
+  text-align: left !important;
+  padding: 0 !important;
+  font-family: var(--font-InterRegular);
+}
+
+.nav_Collapse .ant-collapse-header,
+.nav_Collapse .ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+.nav_Collapse .ant-collapse-header-text {
+  color: #ffffff !important;
+}
